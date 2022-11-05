@@ -14,4 +14,4 @@ jobs:
         with:
           release-type: go
           package-name: shutdown
-          token: PAT_RELEASES
+          token: ${{ secrets.PAT_RELEASES }}

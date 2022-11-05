@@ -1,0 +1,20 @@
+name: Go
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  semantic-release:
+    if: |
+      github.repository == 'jtwatson/shutdown' &&
+      github.ref == 'refs/heads/master' &&
+      github.event.pull_request.merged
+    name: Run semantic-release
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v3
+      run: |
+        npm install --save-dev semantic-release@19
+        npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

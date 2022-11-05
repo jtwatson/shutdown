@@ -41,22 +41,3 @@ jobs:
 
           # Optional: show only new issues if it's a pull request. The default value is `false`.
           only-new-issues: true
-
-  semantic-release:
-    needs: [test, golangci]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run semantic-release
-        if: github.repository == 'jtwatson/shutdown' &&
-          github.ref == 'refs/heads/master' &&
-          (
-          github.event_name == 'pull_request' &&
-          github.event.action == 'closed' &&
-          github.event.pull_request.merged == true
-          )
-        run: |
-          npm install --save-dev semantic-release@19
-          npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

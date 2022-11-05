@@ -12,8 +12,10 @@ jobs:
       github.ref == 'refs/heads/master' &&
       github.event.pull_request.merged
     steps:
-      - name: install and run semantic-release
+      - name: Check out code
         uses: actions/checkout@v3
+
+      - name: install and run semantic-release
         run: |
           npm install --save-dev semantic-release@19
           npx semantic-release

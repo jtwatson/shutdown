@@ -8,9 +8,7 @@ jobs:
   semantic-release:
     name: Run semantic-release
     runs-on: ubuntu-latest
-    if: |
-      github.repository == 'jtwatson/shutdown' &&
-      github.event.pull_request.merged
+    if: github.repository == 'jtwatson/shutdown'
     steps:
       - name: Check out code
         uses: actions/checkout@v3

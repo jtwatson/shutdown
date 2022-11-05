@@ -1,7 +1,8 @@
 name: Go
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - "master"
 
 jobs:
   semantic-release:
@@ -9,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       github.repository == 'jtwatson/shutdown' &&
-      github.ref == 'refs/heads/master' &&
       github.event.pull_request.merged
     steps:
       - name: Check out code

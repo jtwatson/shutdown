@@ -2,7 +2,7 @@
 
 [![GoDoc](https://img.shields.io/badge/pkg.go.dev-doc-blue)](http://pkg.go.dev/github.com/jtwatson/shutdown)
 
-**shutdown** is a simple packages that helps facilitate a graceful shutdown of your application. It can be used to a context that will be canceled when your program receives SIGTERM or SIGINT from the os.
+**shutdown** is a simple package that helps facilitate a graceful shutdown of your application. It can create a context that will be canceled when your program receives SIGTERM or SIGINT from the os.
 
 ## Installation
 

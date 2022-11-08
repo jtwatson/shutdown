@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/jtwatson/shutdown/compare/v0.1.0...v0.1.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* Change name of GitHub Action to Release ([#21](https://github.com/jtwatson/shutdown/issues/21)) ([fd0c2e1](https://github.com/jtwatson/shutdown/commit/fd0c2e18fa643b819508571905594e433b274098))
+
 ## [0.1.0](https://github.com/jtwatson/shutdown/compare/v0.0.1...v0.1.0) (2022-11-05)
 
 
